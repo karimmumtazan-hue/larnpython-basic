@@ -1,6 +1,6 @@
 import json
 print("---------- READ JSON FILE ---------")
-file_json_path = r"C:\SMA IT HSI\PYTHON\python-basic\materi\materi12\rukun_islam.json"
+file_json_path = r"K:\SMA IT HSI\PYTHON\materi\materi12\rukun_islam.json"
 with open(file_json_path, "r") as file_rukun_islam:
   # baca dengan fungsi load() dari module json
   data_json = json.load(file_rukun_islam)

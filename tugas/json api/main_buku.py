@@ -1,6 +1,6 @@
 import json
 
-path_json = r"C:\SMA IT HSI\PYTHON\python-basic\tugas\json api\data_buku.json"
+path_json = r"K:\SMA IT HSI\PYTHON\tugas\json api\data_buku.json"
 # Baca file JSON lokal
 with open(path_json, "r") as file:
     data_materi=json.load(file)

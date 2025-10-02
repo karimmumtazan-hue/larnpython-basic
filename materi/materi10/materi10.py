@@ -3,7 +3,7 @@ import csv
 print("Materi 10 - File Handling")
 print("-------------------------")
 # buka file
-file_path = r"C:/SMA IT HSI/PYTHON/python-basic/materi/materi10/pesan.txt" # sesuaikan sendiri
+file_path = r"K:\SMA IT HSI\PYTHON\materi\materi10\pesan.txt" # sesuaikan sendiri
 file_pesan = open(file_path, "r")
 # baca isi file
 isi_pesan = file_pesan.read()
@@ -13,7 +13,7 @@ print(f"ISI PESAN => {isi_pesan}")
 file_pesan.close()
 
 print('-----READ CSV FILE -----')
-file_path_csv = r"C:/SMA IT HSI/PYTHON/python-basic/materi/materi10/jajan.csv"
+file_path_csv = r"K:\SMA IT HSI\PYTHON\materi\materi10\jajan.csv"
 file_jajan = open(file_path_csv, "r")
 isi_table_jajan = file_jajan.read()
 print(f"TABLE JAJAN => {isi_table_jajan}")
