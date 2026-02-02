@@ -75,21 +75,30 @@ baxia.attack(boss)
 boss.attack(baxia)
 rafaela.heal(baxia)
 
-print("\n--- Boss dipukulin sampai HP <= 20% (80 HP) ---")
-cecilion.attack(boss) # HP 330
-cecilion.attack(boss) # HP 260
-cecilion.attack(boss) # HP 190
-cecilion.attack(boss) # HP 120
-cecilion.attack(boss) # HP 50 (Trigger Rage Mode di serangan berikutnya)
+print("\n=== Boss dipukulin sampai marah ===")
+cecilion.attack(boss) # HP boss 330
+cecilion.attack(boss) # HP boss 260
+cecilion.attack(boss) # HP boss 190
+
+print("\n=== bosnya gak terima, serang balik ke baxia ===")
+boss.attack(baxia) # HP baxia 210
+boss.attack(baxia) # HP baxia 170
+boss.attack(baxia) # HP baxia 130
+boss.attack(baxia) # HP baxia 90
+boss.attack(baxia) # HP baxia 50
+boss.attack(baxia) # HP baxia 10
+
+cecilion.attack(boss) # HP boss 120
+cecilion.attack(boss) # HP boss 50 ( habis ini Rage Mode karena udah HP hampir dibawah 20% )
 
 # Boss menyerang dalam mode Rage
-boss.attack(cecilion)
+boss.attack(baxia)
 
-# Serangan terakhir untuk membunuh Boss
+# Serangan terakhir untuk memodarkan Boss
 print("\n--- Serangan Terakhir ---")
-cecilion.attack(boss) 
+cecilion.attack(boss) # modarlah bosnya
 
 print("\n=== STATUS TERAKHIR ===")
-print(f"Status {baxia.name}: {baxia.hp} HP")
-print(f"Status {cecilion.name}: {cecilion.hp} HP")
-print(f"Status {boss.name}: {'💀MATI' if not boss.is_alive() else str(boss.hp) + ' HP'}")
+for hero in [baxia, cecilion, rafaela, goblin, boss]:
+    status = "🟢HIDUP" if hero.is_alive() else "💀 MATI"
+    print(f"[{status}] {hero.name} | HP: {hero.hp}/{hero.hp_max} | Job: {hero.job}")
