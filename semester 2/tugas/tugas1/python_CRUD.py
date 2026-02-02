@@ -9,6 +9,7 @@ def tambah():
     siswa = {"id": id_siswa, "nama": nama}
     daftar_siswa.append(siswa)
     print("Data berhasil ditambahkan.")
+    print("="*70)
 
 def tampilkan():
     print("\n--- Data Siswa ---")
@@ -17,6 +18,7 @@ def tampilkan():
     else:
         for siswa in daftar_siswa:
             print(f"ID: {siswa['id']}, Nama: {siswa['nama']}")
+            print("="*70)
 
 def ubah():
     id_cari = input("Masukkan ID data yang akan diubah: ")
@@ -26,7 +28,7 @@ def ubah():
             print("Data berhasil diubah.")
             return
     print("ID tidak ditemukan.")
-    print
+    print("="*70)
 
 def hapus():
     id_cari = input("Masukkan ID data yang akan dihapus: ")
